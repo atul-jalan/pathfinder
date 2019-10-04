@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+/*Setting global variables and conditions*/
+:root {
+	--main-neutral: rgb(239,239,239);
+	--main-gray: rgb(217,217,217);
+	--main-blue: rgb(11,60,93);
+	--main-ivory-black: rgb(29,39,49);
+	--main-yellow: rgb(249,207,0);
+	--yellow-dark: rgb(198,165,0);
+	--main-tangerine: rgb(241,159,77);
+	--main-tangerine-dark: rgb(235,127,18);
+
+
+	--main-grid-blue: rgb(68,132,206);
+	--main-grid-dark-blue: rgb(45, 104, 173);
+	--main-grid-red: rgb(249, 0, 83);
+	--main-grid-dark-red: rgb(198, 0, 66);
+
+	--header-margin: 30px;
+}
+body {
+	margin: 0 auto;
+}
+
+/*Tutorial Stuff*/
+#tutorial {
+	z-index: 1;
+	position: absolute;
+
+	visibility: hidden;
+
+	width: 800px;
+	height: 520px;
+
+
+	background-color: rgba(255,246,201, 1.0);
+}
+
+#tutorialTitle {
+	color: var(--main-blue);
+	text-align: center;
+	margin-bottom: 0px;
+}
+#tutorialDropdowns {
+	display: inline-block;
+	width: 100%;
+}
+.indivTutorialDropdown {
+	float: left;
+	width: 33.3333%;
+	font-family: "Ubuntu";
+	color: var(--main-ivory-black);
+}
+.tutorialDropdownTitle {
+	text-align: center;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.tutorialImages {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;	
+	display: block;
+	border: 3px solid var(--main-yellow);
+}
+
+/*All the header stuff*/
+
+/*Creates the fixed header at the top of the screen that wraps entire width of page*/
+#fixedHeader {
+	width: 100%;
+	position: fixed;
+	background-color: var(--main-yellow);
+}
+
+/*Floats the title and tutorial button to the left*/
+#headerLeft {
+	float: left;
+}
+
+/*Just the title of the page*/
+.title {
+	float: left;
+	margin-left: var(--header-margin);
+	font-size: 30px;
+}
+
+/*Fonts for all the titles in the header*/
+.titleFont {
+	font-family: "Ubuntu";
+	color: white;
+}
+
+/*The tutorial button*/
+#tutorialButton {
+	margin-top: 23px;
+	margin-left: 30px;
+	background-color: var(--main-tangerine);
+	color: white;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px 20px;
+	border: none;
+}
+#tutorialButton:hover {
+	transition: background-color .2s linear;
+	background-color: var(--main-tangerine-dark);
+	outline: none;
+}
+#tutorialButton:focus {
+	outline: none;
+}
+
+/*Floats everything but the page title and tutorial button to the right of the header*/
+.headerRight {
+	float: right;
+}
+
+/*Div elements for titles that have dropdowns*/
+.dropdown {
+	margin-right: var(--header-margin);
+	position: relative;
+	display: inline-block;
+}
+
+/*Titles of elements that have dropdown features*/
+.dropdownTitle {
+	margin-top: 32px;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.dropdown:hover .dropdownContent { /*reveals the content on hovering*/
+	display: block;
+} 
+.dropdown:hover .dropdownTitle { /*changes the color of the title on hovering*/
+	transition: color .2s linear;
+	color: var(--main-blue);
+}
+
+/*Div for the dropdown menu itself*/
+.dropdownContent {
+	display: none;
+	position: absolute;
+	min-width: 200px;
+	z-index: 1;
+	background-color: rgba(217,217,217, 1.0);
+	border-radius: 5px;
+	border: 3px solid rgba(11,60,93, 1.0);
+}
+
+/*For the a's in the dropdown menu*/
+.dropdownA {
+	font-family: "Ubuntu";
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	color: var(--main-blue);
+	padding-top: 3px;
+	padding-left: 1px;
+	border-bottom: 1px solid rgba(173,173,173,1.0);
+}
+.dropdownASelected {
+	font-family: "Ubuntu";
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	color: var(--main-ivory-black);
+	padding-top: 3px;
+	padding-left: 1px;
+	border-bottom: 1px solid rgba(173,173,173,1.0);
+
+	background-color: rgba(11,60,93,0.6);
+
+}
+.dropdownA:hover {
+	transition: color .2s linear;
+	color: var(--main-ivory-black);
+
+}
+
+/*For the button to clear the grid*/
+.clearButton {
+	margin-right: var(--header-margin);
+	background-color: var(--main-yellow);
+	border: none;
+	font-size: 20px;
+	font-weight: 700;
+}
+.clearButton:hover { 
+	transition: color .2s linear;
+	color: var(--main-blue);
+}
+.clearButton:focus {
+	outline: none;
+}
+
+/*For the button to solve*/
+#solveButton {
+	margin-right: var(--header-margin);
+	border: none;
+	background-color: var(--main-blue);
+	color: white;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px 20px;
+	min-width: 100px;
+}
+#solveButton:hover {
+	transition: background-color .2s linear;
+	background-color: var(--main-ivory-black);
+	outline: none;
+}
+#solveButton:focus {
+	outline: none;
+}
+
+/*All the grid stuff*/
+
+/*Wrapper for the entire thing*/
+.gridWrapper {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+/*spacing to make sure content is not hidden by header*/
+#spacing {
+	width: 100%;
+}
+
+/*Div that holds all the rectangles*/
+#grid {
+	width: 95%;
+	display: inline-block;
+	font-size: 0px;
+}
+.rect {
+	margin: 0 auto;
+	display: inline-block;
+	transition: background-color .2s linear;
+}

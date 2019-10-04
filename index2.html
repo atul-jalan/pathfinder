@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+		<title>Pathfinder by Atul Jalan</title>
+		<link rel="stylesheet" href="indexStyle.css">
+		<script type="text/javascript" src="index.js"></script>
+		<script type="text/javascript" src="graph.js"></script>
+	</head>
+
+	<body>
+
+		<div id="tutorial">
+
+			<h2 id = "tutorialTitle" class = "titleFont">Welcome to Pathfinder</h2>
+
+			<div id="tutorialDropdowns">
+				<div class="indivTutorialDropdown">
+					<h3 class="tutorialDropdownTitle">Choose Algorithms</h3>
+					<img class = "tutorialImages" src="./images/algoDropdown.png">
+				</div>
+				<div class="indivTutorialDropdown">
+					<h3 class="tutorialDropdownTitle">Generate Mazes</h3>
+					<img class = "tutorialImages" src="./images/mazeDropdown2.png">
+				</div>
+				<div class="indivTutorialDropdown">
+					<h3 class="tutorialDropdownTitle">Change Speeds</h3>
+					<img class = "tutorialImages" src="./images/speedDropdown.png">
+				</div>
+			</div>
+			<div id="tutorialDropdowns">
+				<div class="indivTutorialDropdown">
+					<h3 class="tutorialDropdownTitle">Resize Grid</h3>
+					<img class = "tutorialImages" src="./images/sizeDropdown.png">
+				</div>
+				<div class="indivTutorialDropdown">
+					<h3 class="tutorialDropdownTitle">Reposition Start & End</h3>
+					<img class = "tutorialImages" src="./images/changePos.png">
+				</div>
+				<div class="indivTutorialDropdown">
+					<h3 class="tutorialDropdownTitle">Drag to add/remove walls</h3>
+					<img class = "tutorialImages" src="./images/drawWalls.png">
+				</div>
+			</div>
+		</div>
+
+		<div id="fixedHeader">
+
+			<div id = "headerLeft">
+				<h2 id="pageTitle" class = "title titleFont">Pathfinder by Atul Jalan</h2>
+				<button id = "tutorialButton" onclick="showTutorial(event)">Tutorial</button>
+			</div>
+
+			<div class = "headerRight">
+
+				<div class="dropdown">
+					<h2 class="dropdownTitle titleFont">Algorithms &#x25BE</h2>
+					<div class="dropdownContent" id="algorithmDropdownContent"></div>
+				</div>
+
+				<div class="dropdown">
+					<h2 class="dropdownTitle titleFont">Mazes &#x25BE</h2>
+					<div class="dropdownContent" id="mazeDropdownContent"></div>
+				</div>
+
+				<div class ="dropdown">
+					<h2 class="dropdownTitle titleFont">Speed &#x25BE</h2>
+					<div class="dropdownContent" id="speedDropdownContent"></div>
+				</div>
+
+				<div class ="dropdown">
+					<h2 class="dropdownTitle titleFont">Grid Size &#x25BE</h2>
+					<div class="dropdownContent" id="sizeDropdownContent"></div>
+				</div>
+
+				<button id = "solveButton" onclick="processSolveButton(event)">Solve</button>
+
+				<button class = "clearButton titleFont" onclick="processClearAll(event)">Clear All</button>
+
+				<button class = "clearButton titleFont" onclick="processClearPath(event)">Clear Path</button>
+
+			</div>
+
+		</div>
+
+		<div class="gridWrapper">
+			<div id="spacing"></div>
+			<div id="grid" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)"></div>
+		</div>
+
+	</body>
+
+</html>
